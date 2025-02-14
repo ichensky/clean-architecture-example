@@ -1,0 +1,61 @@
+﻿@using CleanArchitectureExample.ViewModels
+@{
+    ViewData["Title"] = "Todo Page";
+}
+@model TodoViewModel
+
+<div class="text-center">
+    <h1 class="display-4">Todo</h1>
+
+	@using (Html.BeginForm("Add", "Todo", FormMethod.Post, new { @class = "form-inline" }))
+	{
+		<div class="row">
+			<div class="col-2"></div>
+			<div class="col-6">
+				@Html.TextAreaFor(model => model.Title, new { @class = "form-control", @rows = 3, @value = Model.Title })
+			</div>
+			<div class="col-2">
+				<button class="btn btn-primary" type="submit">Add todo</button>
+			</div>
+			<div class="col-2"></div>
+		</div>
+	}
+</div>
+
+<hr />
+
+<div class="row">
+	<div class="col-2"></div>
+	<div class="col-8">
+		<ul class="list-group">
+			@{
+				foreach (var todo in Model.Todos)
+				{
+					@using (Html.BeginForm("Delete", "Todo", FormMethod.Post, new { @class = "form-inline" }))
+					{
+						<li class="list-group-item">
+							<div class="row">
+								<div class="col-9">
+									<div class="row">
+										<div class="col4">
+											<small>@todo.Date</small>
+										</div>
+										<div class="col-8">
+											@todo.Title
+										</div>
+									</div>
+								</div>
+								<div class="col-3">
+									<button class="btn btn-outline-danger" type="submit">Delete todo</button>
+									@Html.Hidden("Id", todo.Id, new { })
+								</div>
+
+							</div>
+						</li>
+					}
+				}
+			}
+		</ul>
+	</div>
+	<div class="col-2"></div>
+</div>
