@@ -4,6 +4,9 @@ using DomainLayer.Models;
 
 namespace CleanArchitectureExample.Presenters
 {
+    /// <summary>
+    /// Prepares view models.
+    /// </summary>
     public class TodoPresenter : ITodoPresenter
     {
         public TodoViewModel CreateTodoViewModel(IReadOnlyCollection<Todo> todos)
