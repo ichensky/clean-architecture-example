@@ -1,4 +1,4 @@
-﻿namespace CleanArchitectureExample.Helpers
+﻿namespace Presenters.Helpers
 {
     public static class StringExtensions
     {

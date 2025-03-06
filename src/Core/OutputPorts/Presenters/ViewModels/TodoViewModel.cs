@@ -1,4 +1,4 @@
-﻿namespace CleanArchitectureExample.ViewModels
+﻿namespace Core.OutputPorts.Presenters.ViewModels
 {
     public record TodoDto(Guid Id, string Title, string Date);
 

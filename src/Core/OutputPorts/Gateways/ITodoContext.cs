@@ -1,7 +1,8 @@
 ﻿using DomainLayer.Models;
 using Microsoft.EntityFrameworkCore;
+using InfrastructureLayer.Database;
 
-namespace InfrastructureLayer.Database
+namespace Core.OutputPorts.Gateways
 {
     public interface ITodoContext
     {

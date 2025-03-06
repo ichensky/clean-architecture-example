@@ -1,7 +1,6 @@
-﻿using CleanArchitectureExample.ViewModels;
-using DomainLayer.Models;
+﻿using DomainLayer.Models;
 
-namespace CleanArchitectureExample.Presenters
+namespace Core.OutputPorts.Presenters
 {
     public interface ITodoPresenter
     {

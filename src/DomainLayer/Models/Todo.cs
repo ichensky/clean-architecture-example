@@ -2,7 +2,7 @@
 
 namespace DomainLayer.Models
 {
-    public class Todo : IAggregateRootEntity
+    public class Todo
     {
         public Todo() { }
 

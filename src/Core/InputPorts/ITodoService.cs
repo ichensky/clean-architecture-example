@@ -1,6 +1,4 @@
-﻿using DomainLayer.Models;
-
-namespace ApplicationLayer
+﻿namespace Core.InputPorts
 {
     public interface ITodoService
     {

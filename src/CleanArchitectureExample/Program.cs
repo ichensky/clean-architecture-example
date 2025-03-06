@@ -1,14 +1,19 @@
-using ApplicationLayer;
-using CleanArchitectureExample.Presenters;
+using ApplicationLayer.Interactors;
+using Core.InputPorts;
+using DomainLayer.SeedCore.OutputPorts.Gateways;
+using DomainLayer.SeedCore.OutputPorts.Presenters;
 using InfrastructureLayer.Database;
+using Presenters.Presenters;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddSingleton<ITodoPresenter, TodoPresenter>();
 builder.Services.AddScoped<ITodoService, TodoService>();
+
+builder.Services.AddScoped<ITodoPresenter, TodoPresenter>();
+builder.Services.AddScoped<ITodoReportPresenter, TodoReportPresenter>();
 
 builder.Services.AddDbContext<ITodoContext, TodoContext>();
 

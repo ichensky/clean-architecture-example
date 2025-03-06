@@ -19,9 +19,4 @@
     <ProjectReference Include="..\DomainLayer\DomainLayer.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ImagesService\" />
-    <Folder Include="FilesService\" />
-  </ItemGroup>
-
 </Project>
