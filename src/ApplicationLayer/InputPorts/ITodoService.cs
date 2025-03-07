@@ -5,7 +5,7 @@ namespace ApplicationLayer.InputPorts;
 
 public interface ITodoService
 {
-    Task PrintTodosQueue(ITodoPresenter todoPresenter);
+    Task PrintTodosQuery(ITodoPresenter todoPresenter);
 
     Task CreateTodoCommand(string title);
 

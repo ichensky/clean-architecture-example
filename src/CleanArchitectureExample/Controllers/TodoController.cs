@@ -30,7 +30,7 @@ public class TodoController(ITodoService todoService, ITodoIndexPagePresenter to
 
     private async Task<IActionResult> ShowIndexView()
     {
-        await todoService.PrintTodosQueue(todoIndexPagePresenter);
+        await todoService.PrintTodosQuery(todoIndexPagePresenter);
 
         var viewModel = todoIndexPagePresenter.GetViewModel();
 

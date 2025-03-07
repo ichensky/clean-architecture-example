@@ -10,7 +10,7 @@ public class TodoReportController(ITodoService todoService, ITodoReportPresenter
     [HttpPost]
     public async Task<IActionResult> Index()
     {
-        await todoService.PrintTodosQueue(todoReportPresenter);
+        await todoService.PrintTodosQuery(todoReportPresenter);
 
         var report = todoReportPresenter.GetReport();
 

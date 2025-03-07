@@ -8,7 +8,7 @@ namespace ApplicationLayer.Interactors;
 
 public class TodoService(ITodoContext todoContext) : ITodoService
 {
-    public async Task PrintTodosQueue(ITodoPresenter todoPresenter)
+    public async Task PrintTodosQuery(ITodoPresenter todoPresenter)
     {
         var todo = await todoContext.Todo.AsNoTracking().OrderByDescending(todo => todo.Date).ToListAsync();
 
