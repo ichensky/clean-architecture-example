@@ -11,17 +11,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainLayer", "DomainLayer\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfrastructureLayer", "InfrastructureLayer\InfrastructureLayer.csproj", "{804221C6-A36A-EC30-9B10-5BA2E5053374}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. UseCases", "2. UseCases", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Application Business Rules - UseCases", "2. Application Business Rules - UseCases", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Controllers+ApplicationStart", "4. Controllers+ApplicationStart", "{DBD7020C-F62F-4F31-AE37-398CD3F4C79B}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Interface Adapters - Controllers+Web", "4. Interface Adapters - Controllers+Web", "{DBD7020C-F62F-4F31-AE37-398CD3F4C79B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Enterprise Business Rules", "1. Enterprise Business Rules", "{AA4612E7-0B78-4310-85B5-81539AF5368C}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Enterprise Business Rules - Entities", "1. Enterprise Business Rules - Entities", "{AA4612E7-0B78-4310-85B5-81539AF5368C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Gateways", "3. Gateways", "{2F710262-2F39-4EC7-89FC-2DC3668433BC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Interface Adapters - Gateways", "3. Interface Adapters - Gateways", "{2F710262-2F39-4EC7-89FC-2DC3668433BC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presenters", "Presenters\Presenters.csproj", "{BC8320A9-4B0B-4AFE-B701-139B8CCE867B}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Presenters", "5. Presenters", "{21A3D991-AA0B-4568-AC3D-14093B604931}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Interface Adapters - Presenters", "5. Interface Adapters - Presenters", "{21A3D991-AA0B-4568-AC3D-14093B604931}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
