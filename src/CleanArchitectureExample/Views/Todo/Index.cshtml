@@ -4,8 +4,19 @@
 }
 @model TodoViewModel
 
-<div class="text-center">
+<div class="text-center">
     <h1 class="display-4">Todo</h1>
+
+	@using (Html.BeginForm("Index", "TodoReport", FormMethod.Post, new { @class = "form-inline" }))
+	{
+		<div class="row">
+			<div class="col-4">
+				<button class="btn btn-primary" type="submit">Download Todos Report</button>
+			</div>
+			<div class="col-2"></div>
+		</div>
+	}
+	<hr />
 
 	@using (Html.BeginForm("Add", "Todo", FormMethod.Post, new { @class = "form-inline" }))
 	{
@@ -59,3 +70,4 @@
 	</div>
 	<div class="col-2"></div>
 </div>
+

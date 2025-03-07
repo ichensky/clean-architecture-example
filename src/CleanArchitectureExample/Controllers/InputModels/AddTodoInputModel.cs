@@ -1,4 +1,4 @@
-﻿namespace CleanArchitectureExample.Controllers
+﻿namespace CleanArchitectureExample.Controllers.InputModels
 {
     public class AddTodoInputModel
     {

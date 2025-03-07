@@ -4,6 +4,7 @@ using DomainLayer.SeedCore.OutputPorts.Gateways;
 using DomainLayer.SeedCore.OutputPorts.Presenters;
 using InfrastructureLayer.Database;
 using PresentersLayer.Presenters;
+using PresentersLayer.ViewModels;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +13,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ITodoService, TodoService>();
 
-builder.Services.AddScoped<ITodoPresenter, TodoPresenter>();
-builder.Services.AddScoped<ITodoReportPresenter, TodoReportPresenter>();
+builder.Services.AddTransient<ITodoIndexPagePresenter, TodoIndexPagePresenter>();
+builder.Services.AddTransient<ITodoReportPresenter, TodoReportPresenter>();
 
 builder.Services.AddDbContext<ITodoContext, TodoContext>();
 

@@ -1,10 +1,12 @@
-﻿using Core.InputPorts;
+﻿using CleanArchitectureExample.Controllers.InputModels;
+using Core.InputPorts;
+using DomainLayer.SeedCore.OutputPorts.Presenters;
 using Microsoft.AspNetCore.Mvc;
 using PresentersLayer.Presenters;
 
 namespace CleanArchitectureExample.Controllers;
 
-public class TodoController(ITodoService todoService) : Controller
+public class TodoController(ITodoService todoService, ITodoIndexPagePresenter todoIndexPagePresenter) : Controller
 {
     public async Task<IActionResult> Index()
     {
@@ -29,22 +31,10 @@ public class TodoController(ITodoService todoService) : Controller
 
     private async Task<IActionResult> ShowIndexView()
     {
-        var todoPresenter = await GetTodoPresenter(todoService);
+        await todoService.PrintTodosQueue(todoIndexPagePresenter);
 
-        var viewModel = todoPresenter.TodoViewModel();
+        var viewModel = todoIndexPagePresenter.GetViewModel();
 
         return View("Index", viewModel);
-    }
-
-    private static async Task<TodoPresenter> GetTodoPresenter(ITodoService todoService)
-    {
-        var presenters = await todoService.ShowTodosQueue();
-
-        if (presenters.TodoPresenter is not TodoPresenter todoPresenter)
-        {
-            throw new InvalidOperationException("Invalid presenter");
-        }
-
-        return todoPresenter;
     }
 }

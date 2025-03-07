@@ -5,7 +5,7 @@ namespace Core.InputPorts;
 
 public interface ITodoService
 {
-    Task<(ITodoPresenter TodoPresenter, ITodoReportPresenter TodoReportPresenter)> ShowTodosQueue();
+    Task PrintTodosQueue(ITodoPresenter todoPresenter);
 
     Task CreateTodoCommand(string title);
 

@@ -4,33 +4,27 @@ using PresentersLayer.ViewModels;
 
 namespace PresentersLayer.Presenters;
 
-public class TodoPresenter : ITodoPresenter
+public class TodoIndexPagePresenter : ITodoIndexPagePresenter
 {
-    private TodosResponseModel? todosResponseModel;
+    private TodosResponseModel todosResponseModel;
 
     public void SetTodos(TodosResponseModel todosResponseModel)
     {
+        ArgumentNullException.ThrowIfNull(todosResponseModel, nameof(todosResponseModel));
+
         this.todosResponseModel = todosResponseModel;
     }
 
-    public TodoViewModel TodoViewModel()
+    public TodoViewModel GetViewModel()
     {
-        if (todosResponseModel is null)
-        {
-            return new TodoViewModel
-            {
-                Title = string.Empty,
-                Todos = []
-            };
-        }
-
         return new TodoViewModel
         {
             Title = string.Empty,
             Todos = [.. todosResponseModel.Todos.Select(todo => new TodoDto(
                 todo.Id,
-                todo.Title.FirstCharToUpper(),
-                todo.Date.ToString("yyyy-MM-dd.hh:mm")))]
+                todo.Title,
+                todo.Date.ToString("yyyy-MM-dd")))]
         };
     }
+
 }

@@ -6,18 +6,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ApplicationLayer.Interactors;
 
-public class TodoService(ITodoContext todoContext, ITodoPresenter todoPresenter, ITodoReportPresenter todoReportPresenter) : ITodoService
+public class TodoService(ITodoContext todoContext) : ITodoService
 {
-    public async Task<(ITodoPresenter, ITodoReportPresenter)> ShowTodosQueue()
+    public async Task PrintTodosQueue(ITodoPresenter todoPresenter)
     {
         var todo = await todoContext.Todo.AsNoTracking().OrderByDescending(todo => todo.Date).ToListAsync();
 
         var todosResponseModel = new TodosResponseModel(todo);
 
         todoPresenter.SetTodos(todosResponseModel);
-        todoReportPresenter.SetTodos(todosResponseModel);
-
-        return (todoPresenter, todoReportPresenter);
     }
 
     public async Task CreateTodoCommand(string title)
