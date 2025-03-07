@@ -1,8 +1,7 @@
 ﻿using CleanArchitectureExample.Controllers.InputModels;
-using DomainLayer.SeedCore.OutputPorts.Presenters;
 using Microsoft.AspNetCore.Mvc;
 using PresentersLayer.Presenters;
-using DomainLayer.SeedCore.InputPorts;
+using ApplicationLayer.InputPorts;
 
 namespace CleanArchitectureExample.Controllers;
 

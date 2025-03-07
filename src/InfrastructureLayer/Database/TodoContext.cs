@@ -1,5 +1,5 @@
-﻿using DomainLayer.Models;
-using DomainLayer.SeedCore.OutputPorts.Gateways;
+﻿using ApplicationLayer.OutputPorts.Gateways;
+using DomainLayer.Models;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 

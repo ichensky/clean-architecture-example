@@ -1,8 +1,8 @@
 ﻿using DomainLayer.Models;
-using DomainLayer.SeedCore.OutputPorts.Gateways;
-using DomainLayer.SeedCore.OutputPorts.Presenters;
 using Microsoft.EntityFrameworkCore;
-using DomainLayer.SeedCore.InputPorts;
+using ApplicationLayer.InputPorts;
+using ApplicationLayer.OutputPorts.Gateways;
+using ApplicationLayer.OutputPorts.Presenters;
 
 namespace ApplicationLayer.Interactors;
 

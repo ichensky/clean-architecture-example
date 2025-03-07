@@ -1,5 +1,5 @@
 ﻿using DomainLayer.Models;
 
-namespace DomainLayer.SeedCore.OutputPorts.Presenters;
+namespace ApplicationLayer.OutputPorts.Presenters;
 
 public record TodosResponseModel(IReadOnlyList<Todo> Todos);

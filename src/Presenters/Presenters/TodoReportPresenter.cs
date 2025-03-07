@@ -1,5 +1,5 @@
-﻿using DomainLayer.SeedCore.OutputPorts.Presenters;
-using PresentersLayer.Presenters;
+﻿using PresentersLayer.Presenters;
+using ApplicationLayer.OutputPorts.Presenters;
 
 namespace PresentersLayer.Presenters;
 
