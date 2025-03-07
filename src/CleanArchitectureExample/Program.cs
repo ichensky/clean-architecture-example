@@ -1,10 +1,10 @@
 using ApplicationLayer.Interactors;
-using Core.InputPorts;
 using DomainLayer.SeedCore.OutputPorts.Gateways;
 using DomainLayer.SeedCore.OutputPorts.Presenters;
 using InfrastructureLayer.Database;
 using PresentersLayer.Presenters;
 using PresentersLayer.ViewModels;
+using DomainLayer.SeedCore.InputPorts;
 
 var builder = WebApplication.CreateBuilder(args);
 

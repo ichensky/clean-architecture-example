@@ -1,7 +1,7 @@
 ﻿using DomainLayer.Models;
 using DomainLayer.SeedCore.OutputPorts.Presenters;
 
-namespace Core.InputPorts;
+namespace DomainLayer.SeedCore.InputPorts;
 
 public interface ITodoService
 {
