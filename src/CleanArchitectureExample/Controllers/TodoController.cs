@@ -6,7 +6,9 @@ using System.Text;
 
 namespace CleanArchitectureExample.Controllers;
 
-public class TodoController(ITodoService todoService, ITodoIndexPagePresenter todoIndexPagePresenter, ITodoReportPresenter todoReportPresenter) : Controller
+public class TodoController(ITodoService todoService, 
+    ITodoIndexPagePresenter todoIndexPagePresenter, 
+    ITodoReportPresenter todoReportPresenter) : Controller
 {
     [HttpGet]
     public async Task<IActionResult> Index()
