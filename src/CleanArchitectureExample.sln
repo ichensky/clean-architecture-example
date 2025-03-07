@@ -19,7 +19,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Enterprise Business Rule
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Interface Adapters - Gateways", "3. Interface Adapters - Gateways", "{2F710262-2F39-4EC7-89FC-2DC3668433BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presenters", "Presenters\Presenters.csproj", "{BC8320A9-4B0B-4AFE-B701-139B8CCE867B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PresentersLayer", "Presenters\PresentersLayer.csproj", "{BC8320A9-4B0B-4AFE-B701-139B8CCE867B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Interface Adapters - Presenters", "5. Interface Adapters - Presenters", "{21A3D991-AA0B-4568-AC3D-14093B604931}"
 EndProject

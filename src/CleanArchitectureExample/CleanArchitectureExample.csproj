@@ -10,7 +10,7 @@
     <ProjectReference Include="..\ApplicationLayer\ApplicationLayer.csproj" />
     <ProjectReference Include="..\DomainLayer\DomainLayer.csproj" />
     <ProjectReference Include="..\InfrastructureLayer\InfrastructureLayer.csproj" />
-    <ProjectReference Include="..\Presenters\Presenters.csproj" />
+    <ProjectReference Include="..\Presenters\PresentersLayer.csproj" />
   </ItemGroup>
 
 </Project>

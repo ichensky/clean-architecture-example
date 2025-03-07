@@ -1,10 +1,10 @@
-﻿@using Presenters.ViewModels
+﻿@using PresentersLayer.ViewModels
 @{
     ViewData["Title"] = "Todo Page";
 }
 @model TodoViewModel
 
-<div class="text-center">
+<div class="text-center">
     <h1 class="display-4">Todo</h1>
 
 	@using (Html.BeginForm("Add", "Todo", FormMethod.Post, new { @class = "form-inline" }))

@@ -1,6 +1,6 @@
-﻿using Presenters.ViewModels;
+﻿using PresentersLayer.ViewModels;
 
-namespace Presenters.ViewModels;
+namespace PresentersLayer.ViewModels;
 
 public class TodoViewModel
 {

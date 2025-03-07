@@ -1,8 +1,8 @@
 ﻿using DomainLayer.SeedCore.OutputPorts.Presenters;
-using Presenters.Helpers;
-using Presenters.ViewModels;
+using PresentersLayer.Helpers;
+using PresentersLayer.ViewModels;
 
-namespace Presenters.Presenters;
+namespace PresentersLayer.Presenters;
 
 public class TodoPresenter : ITodoPresenter
 {

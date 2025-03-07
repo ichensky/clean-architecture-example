@@ -1,4 +1,4 @@
-﻿namespace Presenters.Helpers
+﻿namespace PresentersLayer.Helpers
 {
     public static class StringExtensions
     {
