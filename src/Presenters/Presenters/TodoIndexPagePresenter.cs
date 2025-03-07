@@ -27,5 +27,4 @@ public class TodoIndexPagePresenter : ITodoIndexPagePresenter
                 todo.Date.ToString("yyyy-MM-dd")))]
         };
     }
-
 }

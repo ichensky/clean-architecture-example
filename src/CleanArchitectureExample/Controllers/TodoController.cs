@@ -2,15 +2,28 @@
 using Microsoft.AspNetCore.Mvc;
 using PresentersLayer.Presenters;
 using ApplicationLayer.InputPorts;
+using System.Text;
 
 namespace CleanArchitectureExample.Controllers;
 
-public class TodoController(ITodoService todoService, ITodoIndexPagePresenter todoIndexPagePresenter) : Controller
+public class TodoController(ITodoService todoService, ITodoIndexPagePresenter todoIndexPagePresenter, ITodoReportPresenter todoReportPresenter) : Controller
 {
+    [HttpGet]
     public async Task<IActionResult> Index()
     {
         return await ShowIndexView();
     }
+
+    [HttpPost]
+    public async Task<IActionResult> Report()
+    {
+        await todoService.PrintTodosQuery(todoReportPresenter);
+
+        var report = todoReportPresenter.GetReport();
+
+        return File(Encoding.Unicode.GetBytes(report), "text/plain", "TodosReport.txt");
+    }
+
 
     [HttpPost]
     public async Task<IActionResult> Add(AddTodoInputModel model)
